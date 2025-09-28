@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { usePortfolioOptimisation } from "../hooks/usePortfolioOptimisation";
+import SimpleStockChart from "../components/ui/SimpleStockChart";
 
 // Its only job is to display the form elements.
 function OptimisationForm() {
   const [ticker1, setTicker1] = useState("SPY");
   const [ticker2, setTicker2] = useState("TLT");
-  const [startDate, setStartDate] = useState("2023-01-01");
-  const [endDate, setEndDate] = useState("");
+  const [startDate, setStartDate] = useState("2019-09-01");
+  const [endDate, setEndDate] = useState("2020-09-30");
 
   const {
     data: results,
@@ -87,7 +88,10 @@ function OptimisationForm() {
             <h3>Optimisation Successful!</h3>
             {/* The <pre> tag is great for displaying JSON nicely */}
 
-            <pre>{JSON.stringify(results, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(results, null, 2)}</pre> */}
+            <div style={{ maxWidth: "900px", margin: "auto" }}>
+              <SimpleStockChart stockData={results.stock_data} />
+            </div>
           </div>
         )}
       </div>
