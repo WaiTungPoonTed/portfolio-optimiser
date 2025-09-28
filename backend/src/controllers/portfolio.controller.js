@@ -16,8 +16,7 @@ const optimisePortfolio = async (req, res) => {
 
     // Call the service layer with the new function name
     const result = await getPortfolioOptimisation({
-      ticker1,
-      ticker2,
+      tickers: [ticker1, ticker2],
       start_date,
       end_date,
     });

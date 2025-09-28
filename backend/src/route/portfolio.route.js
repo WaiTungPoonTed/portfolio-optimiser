@@ -1,7 +1,5 @@
-// src/routes/portfolio.route.js
 import express from "express";
 
-// We will create this controller function in the next step
 import { optimisePortfolio } from "../controllers/portfolio.controller.js";
 
 // Create a new router instance
