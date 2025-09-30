@@ -51,7 +51,7 @@ hostname -I
 Using this to find the wsl IP
 
 ```powershell
-netsh interface portproxy add v4tov4 listenport=5173 listenaddress=0.0.0.0 connectport=5173 connectaddress=172.31.41.54
+netsh interface portproxy add v4tov4 listenport=5173 listenaddress=0.0.0.0 connectport=5173 connectaddress=XXX.XX.XX.XX
 ```
 
 Do the port forwarding
